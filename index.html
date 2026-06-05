@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coleham Deli & Sandwich Bar | Traditional British Sandwiches</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__topbar">
+            <div class="container header__topbar-inner">
+                <div class="header__info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Coleham, Shrewsbury, UK</span>
+                </div>
+                <div class="header__info-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Mon-Sat: 08:00 - 16:00 | Sun: Closed</span>
+                </div>
+                <div class="header__info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+441743000000">+44 1743 000000</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__main">
+            <div class="container header__main-inner">
+                <a href="#" class="header__logo">
+                    <span class="header__logo-title">Coleham Deli</span>
+                    <span class="header__logo-subtitle">Sandwich Bar</span>
+                </a>
+
+                <nav class="header__nav">
+                    <ul class="header__menu">
+                        <li class="header__menu-item"><a href="#about" class="header__menu-link">Our Story</a></li>
+                        <li class="header__menu-item"><a href="#menu" class="header__menu-link">Menu</a></li>
+                        <li class="header__menu-item"><a href="#services" class="header__menu-link">Services</a></li>
+                        <li class="header__menu-item"><a href="#contacts" class="header__menu-link">Find Us</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header__actions">
+                    <a href="https://www.facebook.com/Colehamdeliandsandwichbar" target="_blank" class="header__social-link" title="Follow us on Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#menu" class="header__btn">View Menu</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero__inner">
+            <div class="hero__content">
+                <span class="hero__subtitle">Est. 2024 • Fresh & Homemade</span>
+                <h1 class="hero__title">Traditional British Sandwiches & Artisan Deli</h1>
+                <p class="hero__text">
+                    Welcome to Coleham Deli. We serve freshly prepared sandwiches, crusty paninis, hot breakfast rolls, and premium barista coffee using the finest local ingredients in Shrewsbury.
+                </p>
+                <div class="hero__actions">
+                    <a href="#menu" class="btn btn--primary">Explore Menu</a>
+                    <a href="#services" class="btn btn--secondary">Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container about__inner">
+            <div class="about__grid">
+                <div class="about__content">
+                    <span class="about__subtitle">Our Story</span>
+                    <h2 class="about__title">Crafting the Perfect Sandwich Since 2024</h2>
+                    <p class="about__text">
+                        Nestled in the heart of Shrewsbury, Coleham Deli & Sandwich Bar is a traditional British sandwich shop where passion meets quality. We believe that a great sandwich starts with exceptional ingredients and time-honored methods.
+                    </p>
+                    <p class="about__text">
+                        Every single morning, our kitchen comes alive with the aroma of freshly baked bread. From our signature crusty paninis to classic breakfast rolls, we proudly source 100% of our meats, cheeses, and vegetables from local Shropshire farmers and artisans.
+                    </p>
+                    <div class="about__features">
+                        <div class="about__feature">
+                            <i class="fa-solid fa-bread-slice"></i>
+                            <div>
+                                <h4>Freshly Baked</h4>
+                                <p>Bread prepared and baked daily on-site.</p>
+                            </div>
+                        </div>
+                        <div class="about__feature">
+                            <i class="fa-solid fa-leaf"></i>
+                            <div>
+                                <h4>Locally Sourced</h4>
+                                <p>100% fresh ingredients from local suppliers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about__image-wrapper">
+                    <img src="img/heroes/hero-bg.jpg" alt="Coleham Deli Interior" class="about__img">
+                    <div class="about__badge">
+                        <span>Local Heritage</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="menu__header">
+                <span class="menu__subtitle">Freshly Prepared Daily</span>
+                <h2 class="menu__title">Our Delicious Menu</h2>
+                <p class="menu__text">All our sandwiches are served on fresh artisan bread with a choice of homemade sauces.</p>
+                
+                <div class="menu__tabs">
+                    <button class="menu__tab-btn active" data-tab="sandwiches">Signature Sandwiches</button>
+                    <button class="menu__tab-btn" data-tab="paninis">Hot Paninis & Breakfast</button>
+                </div>
+            </div>
+
+            <div class="menu__content">
+                
+                <div class="menu__grid active" id="tab-sandwiches">
+                    <div class="menu__item">
+                        <div class="menu__item-title-row">
+                            <h3 class="menu__item-name">The Traditional English Ham</h3>
+                            <span class="menu__item-dots"></span>
+                            <span class="menu__item-price">£5.50</span>
+                        </div>
+                        <p class="menu__item-desc">Shropshire cured ham, mature cheddar, English mustard, and crisp heritage salad on thick sourdough.</p>
+                    </div>
+
+                    <div class="menu__item">
+                        <div class="menu__item-title-row">
+                            <h3 class="menu__item-name">Coronation Chicken Classic</h3>
+                            <span class="menu__item-dots"></span>
+                            <span class="menu__item-price">£5.95</span>
+                        </div>
+                        <p class="menu__item-desc">Tender chicken breast in a mild, lightly spiced curried mayonnaise with sultanas and fresh coriander.</p>
+                    </div>
+
+                    <div class="menu__item">
+                        <div class="menu__item-title-row">
+                            <h3 class="menu__item-name">The Coleham Club</h3>
+                            <span class="menu__item-dots"></span>
+                            <span class="menu__item-price">£6.50</span>
+                        </div>
+                        <p class="menu__item-desc">Triple-decker with smoked bacon, roasted turkey breast, crisp lettuce, juicy tomatoes, and garlic mayo.</p>
+                    </div>
+
+                    <div class="menu__item">
+                        <div class="menu__item-title-row">
+                            <h3 class="menu__item-name">Shropshire Ploughman's (V)</h3>
+                            <span class="menu__item-dots"></span>
+                            <span class="menu__item-price">£5.25</span>
+                        </div>
+                        <p class="menu__item-desc">Local farmhouse cheddar, sweet pickle, sliced red onion, and fresh apple on crusty granary bread.</p>
+                    </div>
+                </div>
+
+                <div class="menu__grid" id="tab-paninis">
+                    <div class="menu__item">
+                        <div class="menu__item-title-row">
+                            <h3 class="menu__item-name">Tuna & Mature Cheddar Melt</h3>
+                            <span class="menu__item-dots"></span>
+                            <span class="menu__item-price">£5.80</span>
+                        </div>
+                        <p class="menu__item-desc">Toasted panini filled with flaked tuna chunks, sweetcorn, and oozing melted local cheddar cheese.</p>
+                    </div>
+
+                    <div class="menu__item">
+                        <div class="menu__item-title-row">
+                            <h3 class="menu__item-name">Bacon, Brie & Cranberry Panini</h3>
+                            <span class="menu__item-dots"></span>
+                            <span class="menu__item-price">£6.20</span>
+                        </div>
+                        <p class="menu__item-desc">Crispy Shropshire back bacon, soft melting French brie, and sweet cranberry sauce.</p>
+                    </div>
+
+                    <div class="menu__item">
+                        <div class="menu__item-title-row">
+                            <h3 class="menu__item-name">Traditional Breakfast Roll</h3>
+                            <span class="menu__item-dots"></span>
+                            <span class="menu__item-price">£4.50</span>
+                        </div>
+                        <p class="menu__item-desc">Soft white roll packed with premium local pork sausages, grilled back bacon, and a fried farmhouse egg.</p>
+                    </div>
+
+                    <div class="menu__item">
+                        <div class="menu__item-title-row">
+                            <h3 class="menu__item-name">Roasted Veg & Pesto Toastie (V)</h3>
+                            <span class="menu__item-dots"></span>
+                            <span class="menu__item-price">£5.40</span>
+                        </div>
+                        <p class="menu__item-desc">Grilled Mediterranean vegetables, basil pesto, and creamy mozzarella toasted to perfection.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="menu__footer">
+                <a href="docs/menu-coleham-deli.pdf" target="_blank" class="btn btn--primary">
+                    <i class="fa-solid fa-file-pdf"></i> Download Full Menu (PDF)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="services__header">
+                <span class="services__subtitle">What We Do Best</span>
+                <h2 class="services__title">Our Catering & Services</h2>
+                <p class="services__text">Beyond our daily counter, we bring the finest tastes of Coleham Deli directly to your office, home, or event.</p>
+            </div>
+
+            <div class="services__grid">
+                <div class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                    <h3 class="services__card-title">Daily Deli Takeaway</h3>
+                    <p class="services__card-text">
+                        Stop by for freshly made-to-order sandwiches, hot paninis, artisan snacks, and barista-crafted coffees prepared just the way you like it.
+                    </p>
+                </div>
+
+                <div class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 class="services__card-title">Business & Office Platters</h3>
+                    <p class="services__card-text">
+                        Impress your clients or treat your team. We deliver fresh, beautiful sandwich platters and sweet treats directly to Shrewsbury local businesses.
+                    </p>
+                </div>
+
+                <div class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                    <h3 class="services__card-title">Private Event Catering</h3>
+                    <p class="services__card-text">
+                        From family gatherings to birthday celebrations, we provide bespoke catering options featuring our traditional British buffet favourites.
+                    </p>
+                </div>
+            </div>
+
+            <div class="services__cta">
+                <p class="services__cta-text">Planning an event or need a regular office delivery?</p>
+                <a href="#contacts" class="btn btn--secondary">Get a Bespoke Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <div class="contacts__grid">
+                
+                <div class="contacts__form-wrapper">
+                    <span class="contacts__subtitle">Get In Touch</span>
+                    <h2 class="contacts__title">Drop Us a Line</h2>
+                    <p class="contacts__text">Have a question about our menu, allergy info, or want to order catering? Send us a message.</p>
+                    
+                    <form class="contacts__form" action="#" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email Address" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <select name="subject" class="form-control">
+                                <div class="option">General Enquiry</div>
+                                <div class="option">Catering & Platters Quote</div>
+                                <div class="option">Feedback</div>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="4" placeholder="Your Message..." required class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary contacts__btn">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contacts__info-wrapper">
+                    <div class="contacts__info-block">
+                        <span class="contacts__subtitle">Find Us</span>
+                        <h2 class="contacts__title">Our Location</h2>
+                        
+                        <div class="contacts__details">
+                            <div class="contacts__detail-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p>Coleham Head, Shrewsbury, SY3 7BJ, United Kingdom</p>
+                            </div>
+                            <div class="contacts__detail-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <p><a href="tel:+441743000000">+44 1743 000000</a></p>
+                            </div>
+                            <div class="contacts__detail-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <div>
+                                    <p><strong>Mon - Fri:</strong> 8:00 AM - 3:00 PM</p>
+                                    <p><strong>Sat:</strong> 9:00 AM - 2:00 PM | <strong>Sun:</strong> Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacts__map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2413.43547372297!2d-2.7486806!3d52.7051918!2m3!1f0!2f0!3f0!3m2!1i1024|2i768|4f13.1|3m3!1m2!1s0x487bcc1329bfbd0b%3A0xc6cb5dae168e9834!2sColeham%20Head%2C%20Shrewsbury!5e0!3m2!1sen!2sbw!4v1710000000000!5m2!1sen!2sbw" 
+                            width="100%" 
+                            height="250" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__logo-zone">
+                <a href="#" class="footer__logo">Coleham Deli</a>
+                <p class="footer__copy">&copy; 2024 Coleham Deli & Sandwich Bar. All rights reserved.</p>
+            </div>
+            
+            <div class="footer__socials">
+                <a href="https://www.facebook.com/Colehamdeliandsandwichbar" target="_blank" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" aria-label="TripAdvisor">
+                    <i class="fa-brands fa-tripadvisor"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="js/main.js"></script>
+</body>
+</html>
