@@ -157,6 +157,11 @@
     border-color: var(--color-primary);
 }
 
+/* Ховаємо меню для мобільних пристроїв, буде показано при активації гамбургера */
+.mobile-menu-toggle {
+    display: none;
+}
+
 
 /* ==========================================================================
    УНІВЕРСАЛЬНІ КОМПОНЕНТИ (КНОПКИ)
@@ -834,11 +839,22 @@ select.form-control {
     }
 }
 
-/* Смартфони (до 768px) */
 @media screen and (max-width: 768px) {
-    /* --- Мобільна навігація --- */
+    /* Робимо верхню темну смужку акуратнішою */
+    .header__topbar-inner {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    /* Ховаємо праву кнопку і соцмережі на телефоні, щоб не заважали */
+    .header__actions {
+        display: none;
+    }
+
+    /* 1. Показуємо гамбургер */
     .mobile-menu-toggle {
-        display: flex !important;
+        display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 30px;
@@ -847,18 +863,53 @@ select.form-control {
         border: none;
         cursor: pointer;
         z-index: 1001;
+        padding: 0;
     }
 
+    /* Колір смужок гамбургера (темно-зелений під ваш логотип) */
     .mobile-menu-toggle span {
         display: block;
         width: 100%;
         height: 3px;
-        background-color: #f4ece1; /* Колір паличок під бренд-бук бару */
+        background-color: var(--color-primary); 
         border-radius: 3px;
         transition: all 0.3s ease;
     }
 
-    /* Анімація перетворення гамбургера на хрестик при відкритті */
+    /* 2. Робимо меню виїздним і ховаємо його за правий край екрану */
+    .header__nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Сховано за екраном */
+        width: 250px;
+        height: 100vh;
+        background-color: var(--color-bg-light); /* Світлий фон як у шапці */
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        display: flex;
+        justify-content: center;
+        transition: right 0.4s ease;
+        z-index: 1000;
+    }
+
+    /* Цей клас додасть JS, щоб меню виїхало */
+    .header__nav.active {
+        right: 0;
+    }
+
+    /* Вибудовуємо пункти меню вертикально */
+    .header__menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .header__menu-link {
+        font-size: 20px; /* Робимо лінки більшими для зручності пальця */
+    }
+
+    /* 3. Анімація перетворення гамбургера на хрестик */
     .mobile-menu-toggle.active span:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
     }
@@ -867,67 +918,5 @@ select.form-control {
     }
     .mobile-menu-toggle.active span:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
-    }
-
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%; /* ЗаховаComplex меню за межами екрану */
-        width: 250px;
-        height: 100vh;
-        background-color: #1b3322; /* Темно-зелений фірмовий колір бару */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 100px;
-        gap: 25px;
-        transition: right 0.4s ease;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
-        z-index: 1000;
-    }
-
-    .nav-menu.active {
-        right: 0; /* Виїжджає при кліку */
-    }
-
-    .nav-menu a {
-        font-size: 18px;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    /* --- Головний банер (Hero) --- */
-    .hero-section {
-        padding: 100px 20px 60px 20px;
-        text-align: center;
-    }
-
-    .hero-title {
-        font-size: 32px !important; /* Зменшуємо заголовок, щоб не розривав екран */
-        line-height: 1.2;
-    }
-
-    /* --- Сітки та Контент --- */
-    .menu-grid, .services-grid, .footer-container {
-        grid-template-columns: 1fr !important; /* Усе стає в одну вертикальну колонку */
-    }
-
-    .section-title {
-        font-size: 28px !important;
-        margin-bottom: 30px;
-    }
-
-    /* --- Форма та контакти --- */
-    .contacts-wrapper {
-        grid-template-columns: 1fr !important;
-    }
-
-    .map-container iframe {
-        height: 250px; /* Трохи нижча карта на мобільних */
-    }
-
-    .contact-form {
-        padding: 20px;
     }
 }
