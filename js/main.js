@@ -19,23 +19,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Шукаємо правильні класи
+const menuToggle = document.querySelector('.mobile-menu-toggle');
+const navMenu = document.querySelector('.header__nav'); // <-- змінено на ваш клас
+const navLinks = document.querySelectorAll('.header__menu-link'); // <-- змінено на ваш клас
 
-document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-menu a');
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
 
-    // Відкриття / Закриття меню при кліку на гамбургер
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-
-    // Закриття меню при кліку на будь-яке посилання (плавний скрол до розділу)
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
     });
 });

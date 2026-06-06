@@ -30,7 +30,7 @@
 .header__topbar {
     background-color: var(--color-primary);
     color: var(--color-bg-light);
-    font-size: 13px;
+    font-size: 23px;
     padding: 8px 0;
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
@@ -94,7 +94,7 @@
 }
 
 .header__menu-link {
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 500;
     color: var(--color-dark);
     transition: color 0.3s ease;
